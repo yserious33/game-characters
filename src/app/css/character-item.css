@@ -1,0 +1,30 @@
+/* ---------------------- */
+/* character-item.css Styles */
+/* ---------------------- */
+
+.character-img {
+  width: 60px;
+  border-radius: 12px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+
+.character-info {
+  display: block;
+  margin: 5px 0;
+}
+
+.character-info .character-name {
+  font-size: 1.4rem; 
+  margin-top: 10px;
+  display: inline-block;
+  display: webkit-inline-block;
+  text-align: center;
+}
+
+.character-info .character-shortname {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-top: 0;
+}

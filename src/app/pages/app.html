@@ -1,0 +1,21 @@
+<div class="card search">
+  <h1 class="search-headline">Video Game Character Directory</h1>
+  <label class="search-label">search
+    <span *ngIf="query"
+      [innerHTML]="' for: ' + query"></span></label>
+    <input class="search-input"
+      [(ngModel)]="query" placeholder="type in search term here">
+</div><!-- card search -->
+
+<ul class="characterlist cf"
+  *ngIf="query">
+  <li class="characterlist-item cf"
+    (click)="showCharacter(item); query=''"
+    *ngFor="let item of (characters | search: query)">
+    <character-item class="content" [character]=item></character-item>
+  </li>
+</ul>
+
+<character-details 
+  *ngIf="currentCharacter"
+  [character]="currentCharacter"></character-details>
